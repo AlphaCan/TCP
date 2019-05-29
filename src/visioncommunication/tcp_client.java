@@ -22,10 +22,10 @@ public class tcp_client {
 	public void create_tcp_client(String ip, int port) {
 		try {
 			client = new Socket(InetAddress.getByName(ip), port);//创建实例，通过ip名，反向查找IP
-			client.setSoTimeout(5000);//连接延时5秒
+//			client.setSoTimeout(5000);//连接延时5秒
 		} catch (IOException e) {//出错
-			System.out.println("tcp client connect failed!\r\n");
 			e.printStackTrace();
+			System.out.println("tcp client connect failed!");
 		}
 	}
 
